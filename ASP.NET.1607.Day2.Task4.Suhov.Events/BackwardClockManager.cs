@@ -12,11 +12,11 @@ namespace ASP.NET._1607.Day2.Task4.Suhov.Events
         /// <summary>
         /// Delcare delegate for Event handler
         /// </summary>
-        public delegate void BackwardClockEventHandler(object sender, BackwardClockEventArgs e);
+        public delegate void BackwardClockEventHandler<T>(object sender, BackwardClockEventArgs e);
         /// <summary>
         /// Event for delegate to make grouping subscriptions
         /// </summary>
-        public event BackwardClockEventHandler Finished = delegate { }; 
+        public event BackwardClockEventHandler<int> Finished = delegate { }; 
         /// <summary>
         /// Method that invokes event delegate
         /// </summary>
